@@ -15,9 +15,9 @@ export const ModalProjects = ({ isOpen, setIsOpen }) => {
   return (
     <>
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out p-5"
+        className="fixed inset-0 bg-[rgba(0,0,0,0.50)] bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out p-5"
         onClick={() => setIsOpen(false)}
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+     
       >
         {/* Modal con animación - stopPropagation para evitar que se cierre al hacer clic en el modal */}
         <div 
