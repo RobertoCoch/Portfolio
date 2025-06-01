@@ -28,7 +28,7 @@ export const Certificates = () => {
                         <h4 className='font-bold text-lg'>{certificado.lugarFecha}</h4>
                     </div>
                     <p className='text-lg'>{certificado.descripción}</p>
-                    <button className='border-[rgb(120,219,255,0.15)] cursor-pointer border-2  w-50 h-15 rounded-full transition duration-300 hover:-translate-y-1 self-center'>Ver Certificado</button>
+                    <button className='border-[rgb(120,219,255,0.15)] cursor-pointer border-2  w-50 h-15 rounded-full transition duration-300 hover:-translate-y-1 self-center justify-self-end'>Ver Certificado</button>
                 </div>
             ))}
         </div>
