@@ -41,8 +41,9 @@ export const ModalProjects = ({ isOpen, setIsOpen }) => {
                         <source src={modalProyecto.video} type="video/mp4"/>
                     </video>
                 </div>
-                <div className='text-white p-7 flex md:items-center'>
-                    <p><span className='font-bold'>Funciones clave:</span> {modalProyecto.funciones}</p>
+                <div className='text-white p-9 flex md:items-center flex-col gap-3'>
+                    <h3 className='font-bold text-2xl self-start'>Funciones Clave:</h3>
+                    <p> {modalProyecto.funciones}</p>
                 </div>
             </div>
           ))}

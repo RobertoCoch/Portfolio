@@ -14,7 +14,7 @@ export const AboutMe = () => {
                 <div className="absolute -inset-2 rounded-xl bg-blue-500 blur-lg opacity-30"></div>
                 <div className='h-full bg-[#030711] relative z-10 shadow-md p-5 rounded-3xl border-[rgb(120,219,255,0.15)] border-1'>
                     <h3 className='pb-5 font-extrabold text-2xl text-[#6AB2BF]'>Historia</h3>
-                    <p className='text-lg'>Tengo 20 años y a temprana edad me interese por el desarrollo de software, mis primeros pasos y el cual desarrolle mi logica fue en .NET con C#, pero desde el area que más me cautivo fue el desarrollo web y desde entonces me he capacitado para realizar buenas practicas</p>
+                    <p className='text-lg'>Tengo 20 años y desde una edad temprana descubrí mi interés por el desarrollo de software. Mis primeros pasos los di en .NET con C#, donde comencé a desarrollar mi lógica de programación. Sin embargo, fue el desarrollo web el área que más me cautivó, y desde entonces me he enfocado en capacitarme constantemente para aplicar buenas prácticas y crear soluciones de calidad.</p>
                 </div>
          
             </div>
@@ -25,7 +25,7 @@ export const AboutMe = () => {
                     <h3 className='pb-5 font-extrabold text-2xl text-[#6AB2BF] '>Valores</h3>
                     <p className='text-lg'>
                     1. Aprendizaje continuo: estoy abierto a aprender nuevas tecnologías. <br /><br />  
-                    2. Responsabilidad y compromiso: me tomo cada proyecto con seriedad y me esfuerzo por entregar un trabajo de calidad. <br /><br /> 
+                    2. Responsabilidad y compromiso: me tomo cada proyecto con seriedad y me esfuerzo por entregar un proyecto de calidad. <br /><br /> 
                     3. Trabajo en equipo: la colaboracion es clave para mi y me gusta aprender de los demás.
                     </p>
                 </div>

@@ -1,7 +1,22 @@
+import { useState } from "react";
 import { ChevronDown } from "lucide-react"
+import { ModalPDF } from "./ModalPDF";
+import KardexPDF from '../../assets/documents/kardex-roberto-contreras.pdf'
+
 
 export const Education = () => {
+   const [modalAbierto, setModalAbierto] = useState(false);
+    const cerrarModal = () => setModalAbierto(false);
+    const [fileURL, setFileURL] = useState(null);
+  
+  
+    const handdleClick = (file) => {
+      setFileURL(file);
+      setModalAbierto(true);
+    };
+
   return (
+    <>
     <div className="flex flex-col text-white min-h-screen font-spartan items-center p-10 gap-10 border-t-1 border-[rgb(255,255,255,0.15)] justify-center bg-gradient-to-r from-[#0f151a] to-[#202d38]">
         <h2 className="font-extrabold text-4xl lg:text-7xl md:text-6xl p-5">Educación</h2>
         <div className="flex flex-col gap-5 md:flex-row">
@@ -11,7 +26,7 @@ export const Education = () => {
               <p className="text-lg lg:text-2xl">7° semestre de 9 - En curso</p>
               <p className="text-lg lg:text-2xl"> <span className="font-bold">Especialidad:</span> Desarrollo de Aplicaciones con Nuevas Tecnologías</p>
               <p className="text-lg lg:text-2xl"><span className="font-bold">Promedio General:</span> 95</p>
-               <button className='border-[rgb(120,219,255,0.15)] cursor-pointer border-2  w-50 h-15 rounded-full transition duration-300 hover:-translate-y-1'>Descargar Kardex</button>
+               <button onClick={() => handdleClick(KardexPDF)} className='border-[rgb(120,219,255,0.15)] cursor-pointer border-2  w-50 h-15 rounded-full transition duration-300 hover:-translate-y-1'>Ver Kardex</button>
             </div>
 
             <div className="md:w-1/2">
@@ -55,5 +70,7 @@ export const Education = () => {
         </div>
        
     </div>
+    <ModalPDF isOpen={modalAbierto} onClose={cerrarModal} fileUrl={fileURL} />
+    </>
   )
 }
