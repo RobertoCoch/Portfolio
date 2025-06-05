@@ -8,7 +8,7 @@ import { Certificates } from "./sections/Certificates"
 export const Content = () => {
   return (
     <>
-      <div className="w-full bg-[#030711]">
+      <div className="w-full bg-[#030711] ">
         <Hero></Hero>
         <AboutMe></AboutMe>
         <Skills></Skills>
