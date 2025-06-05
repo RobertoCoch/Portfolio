@@ -1,11 +1,12 @@
 import Proyect1Video from '../../assets/videos/demo-englishub.mp4'
-import { useState } from 'react';
+import GitIcon from '../../assets/images/GitHub.png'
 import { X } from 'lucide-react';
 
 const modalProyectos = [
     {
            funciones: "Autenticación con matricula y contraseña, visualizacion dimacia de datos según el rol, CRUD de tareas, clases y avisos, Uso de modales, estados locales y componentes personalizados en React",
            video: Proyect1Video,
+           url: "https://github.com/RobertoCoch/p-englishub",
     }
 ];
 
@@ -41,10 +42,20 @@ export const ModalProjects = ({ isOpen, setIsOpen }) => {
                         <source src={modalProyecto.video} type="video/mp4"/>
                     </video>
                 </div>
-                <div className='text-white p-9 flex md:items-center flex-col gap-3'>
+                <div className='text-white p-9 flex  flex-col gap-3'>
                     <h3 className='font-bold text-2xl self-start'>Funciones Clave:</h3>
                     <p> {modalProyecto.funciones}</p>
+                     <div className='flex flex-col gap-5'>
+                      <h3 className='font-bold text-2xl self-start'>Repositorio:</h3>
+                      <button className='cursor-pointer border-2 p-2 rounded-full w-35 border-[rgb(120,219,255,0.15)] transition duration-300 hover:-translate-y-1'>
+                        <a href={modalProyecto.url} target="_blank" rel="noopener noreferrer" className='flex items-center gap-2'>
+                          <img className='w-10 h-10' src={GitIcon} alt="" />
+                          <p>Ver</p>
+                        </a>
+                      </button>
+                     </div>
                 </div>
+               
             </div>
           ))}
           

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ModalPDF } from './ModalPDF';
+import { ModalPDF } from '../../components/ModalPDF';
 import CouncilIcon from '../../assets/images/icons/council-mexico.png'
 import CertificadoPDF1 from '../../assets/documents/html-css-roberto-contreras.pdf'
 import CertificadoPDF2 from '../../assets/documents/python-roberto-contreras.pdf'

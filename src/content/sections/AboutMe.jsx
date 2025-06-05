@@ -1,13 +1,23 @@
-import React from 'react'
+import { useState } from 'react'
+import { ModalPDF } from '../../components/ModalPDF'
+import CVPDF from '../../assets/documents/RobertoContreras_CV.pdf'
+
 
 export const AboutMe = () => {
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const cerrarModal = () => setModalAbierto(false);
+  const [fileURL, setFileURL] = useState(null);
+  
+  const handdleClick = (file) => {
+    setFileURL(file);
+    setModalAbierto(true);
+  };
+
   return (
-    <>
-    
-   
+    <>   
     <div className='text-white font-spartan min-h-screen flex flex-col items-center p-10 gap-9'>
         <h2 className="font-extrabold text-4xl lg:text-7xl md:text-6xl">Acerca de mi</h2>
-        <button className='cursor-pointer font-bold w-35 h-15 bg-gradient-to-r from-[#6CB6C3] to-[#2C4C7C] rounded-full transition duration-300 hover:-translate-y-1
+        <button onClick={() => handdleClick(CVPDF)} className='cursor-pointer font-bold w-35 h-15 bg-gradient-to-r from-[#6CB6C3] to-[#2C4C7C] rounded-full transition duration-300 hover:-translate-y-1
 '>Ver CV</button>
         <div className='flex flex-col gap-15 md:flex-row md:p-10 md:justify-center'>
             <div className='relative  md:w-2/5'>
@@ -32,12 +42,8 @@ export const AboutMe = () => {
                
             </div>
         </div>
-      
-
     </div>
-
-
-
+     <ModalPDF isOpen={modalAbierto} onClose={cerrarModal} fileUrl={fileURL} />
      </>
   )
 }

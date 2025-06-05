@@ -3,6 +3,7 @@ import JavaScriptIcon from '../../assets/images/JS.png'
 import SqlIcon from '../../assets/images/sql.png'
 import TypescriptIcon from '../../assets/images/typescript.png'
 import Csharp from '../../assets/images/csharp-icon.png'
+import PythonIcon from '../../assets/images/icons/python-icon.png'
 import ReactIcon from '../../assets/images/react-icon.png'
 import TailwindIcon from '../../assets/images/tailwind-icon.png'
 import ExpressIcon from '../../assets/images/icon-express.png'
@@ -25,13 +26,7 @@ const lenguajes = [
     name: 'SQL',
     icon: SqlIcon,
     value: 70,
-    iconClass: 'w-10 h-10',
-  },
-  {
-    name: 'TypeScript',
-    icon: TypescriptIcon,
-    value: 30,
-    iconClass: 'w-12 h-12',
+    iconClass: 'w-13 h-13',
   },
   {
     name: 'C#',
@@ -39,6 +34,12 @@ const lenguajes = [
     value: 55,
     iconClass: 'w-11 h-12',
   },
+  {
+    name: 'Python',
+    icon: PythonIcon,
+    value: 55,
+    iconClass: 'w-13 h-13',
+  }
 ];
 
 const frameworks = [
@@ -52,13 +53,13 @@ const frameworks = [
         name: 'Tailwind CSS',
         icon: TailwindIcon,
         value: 90,
-        iconClass: 'w-15 h-11',
+        iconClass: 'w-13 h-10',
     },
     {
         name: 'Express',
         icon: ExpressIcon,
         value: 70,
-        iconClass: 'w-15 h-15',
+        iconClass: 'w-14 h-13',
     }
 ];
 
@@ -67,7 +68,7 @@ const herramientas = [
         name: 'Git & GitHub',
         icon: GitIcon,
         value: 70,
-        iconClass: 'w-15 h-13',
+        iconClass: 'w-14 h-13',
     },
     {
         name: 'Postman',
@@ -85,7 +86,7 @@ const herramientas = [
         name: 'Laragon',
         icon: LaragonIcon,
         value: 60,
-        iconClass: 'w-15 h-13',
+        iconClass: 'w-14 h-13',
     },
 ];
 
@@ -100,15 +101,12 @@ export const Skills = () => {
                     <h3 className='pb-5 font-extrabold text-2xl text-[#6AB2BF]'>Lenguajes</h3>
 
                     {lenguajes.map((lenguaje, index) => (
-                    <div key={index} className='flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] p-4 w-full rounded-3xl'>
+                    <div key={index} className='h-24 p-5 flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] w-full rounded-3xl'>
                         <div className="flex items-center gap-2">
                         <img className={lenguaje.iconClass} src={lenguaje.icon} alt={lenguaje.name} />
                         <p>{lenguaje.name}</p>
                         </div>
-                        <div className='flex gap-3 items-center'>
-                        <ProgressBar value={lenguaje.value} />
-                        <p>{lenguaje.value}%</p>
-                        </div>
+                        
                     </div>
                     ))}
                 </div>
@@ -117,14 +115,10 @@ export const Skills = () => {
                     <h3 className='pb-5 font-extrabold text-2xl text-[#6AB2BF]'>Frameworks / Librerias</h3>
 
                     {frameworks.map((framework, index) => (
-                    <div key={index} className='flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] p-4 w-full rounded-3xl'>
+                    <div key={index} className='h-24 p-6 flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] w-full rounded-3xl'>
                         <div className="flex items-center gap-2">
                         <img className={framework.iconClass} src={framework.icon} alt={framework.name} />
                         <p>{framework.name}</p>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                        <ProgressBar value={framework.value} />
-                        <p>{framework.value}%</p>
                         </div>
                     </div>
                     ))}
@@ -134,14 +128,10 @@ export const Skills = () => {
                     <h3 className='pb-5 font-extrabold text-2xl text-[#6AB2BF]'>Herramientas</h3>
 
                     {herramientas.map((herramienta, index) => (
-                    <div key={index} className='flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] p-4 w-full rounded-3xl'>
-                        <div className="flex items-center gap-2">
+                    <div key={index} className='h-25 p-5 flex flex-col text-lg font-medium self-start gap-1 bg-gradient-to-r from-[#19222a] to-[#2f4a61] w-full rounded-3xl'>
+                        <div className="flex items-center gap-3">
                         <img className={herramienta.iconClass} src={herramienta.icon} alt={herramienta.name} />
                         <p>{herramienta.name}</p>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                        <ProgressBar value={herramienta.value} />
-                        <p>{herramienta.value}%</p>
                         </div>
                     </div>
                     ))}

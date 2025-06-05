@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react"
-import { ModalPDF } from "./ModalPDF";
+import { ModalPDF } from "../../components/ModalPDF";
 import KardexPDF from '../../assets/documents/kardex-roberto-contreras.pdf'
 
 
